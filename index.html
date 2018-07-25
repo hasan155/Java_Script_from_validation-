@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="js/jquery.js"></script>	
+		<title>I love my Bangladesh</title>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<section class="maincontent">
+			<header class="header">
+				<h1><script>document.write("Hi, I am Hasan Mahmud");</script></h1>
+			</header>
+			<content class="content">
+			
+			<form name="myform" action="" method="post" onsubmit=" return ValedateForm();">
+				<table>
+				
+					<tr>
+						<td>Name</td>
+						<td><input type="text" name="name" /></td>
+					</tr>
+					
+					<tr>
+						<td>Email</td>
+						<td><input type="text" name="email" /></td>
+					</tr>	
+					
+					<tr>
+						<td>Telephone</td>
+						<td>
+						<input type="text" name="telephone" /><br/>						
+						<input type="checkbox" name="notCall" onclick="anableDisable(this);" />
+						Please do not call me.
+						</td>
+					</tr>	
+
+					<tr>
+						<td>what can we help you with?</td>
+						<td>
+							<select name="subject" id="" value="">
+								<option>Select One</option>
+								<option>Customer Servive</option>
+								<option>Question</option>
+								<option>Comment</option>
+								<option>Others</option>
+							</select>
+						</td>
+					</tr>	
+
+					<tr>
+						<td>Comment</td>
+						<td><input type="text" name="comment" /></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+						<input type="submit" name="submit" value="Submit" />
+						<input type="reset" name="reset" value="Refresh" />
+						</td>
+					</tr>		
+
+					<tr>
+						<td></td>
+						<td>
+							<div id="show"></div>
+						</td>
+					</tr>				
+
+					
+				</table>
+			</form>
+		
+			<script type="text/javascript">
+				function ValedateForm(){
+					var name       = document.myform.name;
+					var email      = document.myform.email;
+					var telephone  = document.myform.telephone;
+					var notCall    = document.myform.notCall;
+					var subject    = document.myform.subject;
+					var comment    = document.myform.comment;
+					
+				if(name.value == ""){
+					document.getElementById("show").innerHTML = "Please enter your name..";
+					return false;
+				}	
+				
+				if(email.value == ""){
+					document.getElementById("show").innerHTML = "Please enter your email..";
+					return false;
+				}	
+				if(email.value.indexOf("@",0)<0){
+					document.getElementById("show").innerHTML = "Please enter your valid email address..";
+					return false;
+				}				
+				if(email.value.indexOf(".",0)<0){
+					document.getElementById("show").innerHTML = "Please enter your valid email address..";
+					return false;
+				}
+				if(telephone.value == "" && notCall.checked == false){
+					document.getElementById("show").innerHTML = "Please enter your valid telephone number..";
+					return false;
+				}	
+				if(subject.selectedIndex < 1){
+					document.getElementById("show").innerHTML = "Please enter you selected of option..";
+					return false;
+				}	
+				if(comment.value == ""){
+					document.getElementById("show").innerHTML = "Please you have must be comments..";
+					return false;
+				}				
+				
+				}
+				
+				function anableDisable(chkbox){
+					if(chkbox.checked == true){
+						document.myform.telephone.disabled =true;
+					}else{
+						document.myform.telephone.disabled =false;
+					}
+				}
+
+			</script>
+			</content>
+			<footer class="footer">
+				<h1><script>document.write("I live in Bangladesh ");</script></h1>
+			</footer>		
+		</section>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

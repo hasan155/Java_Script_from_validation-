@@ -1,0 +1,65 @@
+*{margin:0;padding:0;}
+body{
+	font-family:arial;
+	font-weight:bold;
+
+}
+.maincontent{
+	background:blue; 
+	margin:0 auto;
+	width:960px;
+	
+ }
+.content{
+	min-height:600px;
+	margin:10px;
+	padding:10px 20px;
+	background:green;
+	display:block;
+}
+.footer, .header{
+	background:red;
+	color:#fff;
+	text-align:center;
+}
+table{
+	width:500px;
+	height:400px;
+	font-size:20px;
+	margin:0 auto;
+	padding:30px;
+	border:2px solid red;
+}
+input[type="text"]{
+	width:300px;
+	padding:7px;
+	margin-top:5px;
+	cursor:pointer;	
+} 
+
+input[type="submit"],[type="reset"]{
+	width:150px;
+	padding:7px;
+	cursor:pointer;	
+	margin-top:5px;
+}
+select{
+	width:150px;
+	padding:7px;
+	cursor:pointer;
+	margin-top:5px;	
+}
+input[type="checkbox"]{
+	cursor:pointer;
+	border-radius:50%;
+}
+#show{
+	color:red;
+}
+
+
+
+
+
+
+
